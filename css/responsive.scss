@@ -1,0 +1,113 @@
+@charset 'utf-8';
+
+$ja_font : "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Verdana, "ＭＳ Ｐゴシック", sans-serif;
+$keyColor : #827d79;
+$baseColor : #c8c3bd;
+
+@mixin fontsize($size: 24,$base: 10){
+    font-size: $size + px;
+    font-size: ($size / $base) * 1rem;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: $ja_font;
+    @include fontsize(16);
+}
+
+.container{
+    margin: 0 auto;
+    width: 90%;
+}
+
+
+#cover{
+    width: 100%;
+    height: 250px;
+    background-image: url('../images/responsive.jpg');
+    background-size: cover;
+    
+    @media screen and(-webkit-min-device-pixel-ratio: 2)
+    ,(min-resolution: 2dppx){
+    background-image: url('../images/responsive@2x.jpg');    
+   }
+   
+   @media screen and(min-width: 768px){
+       height: 500px;
+   }
+}
+
+#main{
+    width: 100%;
+    
+    h1{
+        margin: 40px 0;
+        @include fontsize(36);
+    }
+    
+    .contentBox{
+        width: 100%;
+        margin-bottom: 40px;
+        background-color: $baseColor;
+        
+        @media screen and(min-width: 768px){
+            width: 32%;
+        }
+    
+           .title{
+            padding: 10px 0;
+            @include fontsize(24);
+            color: white;
+            background-color: $keyColor;
+        }
+        
+        .text{
+            padding: 10px;
+            @include fontsize(16);
+        }
+    
+        
+    }
+    
+   .contentWrap{
+         @media screen and(min-width: 768px){
+        
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+   }}
+    
+    
+}
+
+footer{
+    padding: 40px 0;
+    background-color: $keyColor;
+    
+    h2{@include fontsize(24);}
+    
+    a{
+        text-decoration: none;
+        
+    
+    .button{
+        @include fontsize(24);
+        background-color: $baseColor;
+        color: white;
+        margin: 20px 0;
+        padding: 20px 0;
+        border-radius: 0.5rem;
+    
+    @media screen and(min-width:768px){   
+        &:hover{background-color:darken($baseColor,15%)}
+    }
+        
+    }}
+}
+
+.textCenter{
+    text-align: center;
+}

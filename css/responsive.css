@@ -1,0 +1,78 @@
+@charset "UTF-8";
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Verdana, "ＭＳ Ｐゴシック", sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem; }
+
+.container {
+  margin: 0 auto;
+  width: 90%; }
+
+#cover {
+  width: 100%;
+  height: 250px;
+  background-image: url("../images/responsive.jpg");
+  background-size: cover; }
+  @media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+    #cover {
+      background-image: url("../images/responsive@2x.jpg"); } }
+  @media screen and (min-width: 768px) {
+    #cover {
+      height: 500px; } }
+
+#main {
+  width: 100%; }
+  #main h1 {
+    margin: 40px 0;
+    font-size: 36px;
+    font-size: 3.6rem; }
+  #main .contentBox {
+    width: 100%;
+    margin-bottom: 40px;
+    background-color: #c8c3bd; }
+    @media screen and (min-width: 768px) {
+      #main .contentBox {
+        width: 32%; } }
+    #main .contentBox .title {
+      padding: 10px 0;
+      font-size: 24px;
+      font-size: 2.4rem;
+      color: white;
+      background-color: #827d79; }
+    #main .contentBox .text {
+      padding: 10px;
+      font-size: 16px;
+      font-size: 1.6rem; }
+  @media screen and (min-width: 768px) {
+    #main .contentWrap {
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between; } }
+
+footer {
+  padding: 40px 0;
+  background-color: #827d79; }
+  footer h2 {
+    font-size: 24px;
+    font-size: 2.4rem; }
+  footer a {
+    text-decoration: none; }
+    footer a .button {
+      font-size: 24px;
+      font-size: 2.4rem;
+      background-color: #c8c3bd;
+      color: white;
+      margin: 20px 0;
+      padding: 20px 0;
+      border-radius: 0.5rem; }
+      @media screen and (min-width: 768px) {
+        footer a .button:hover {
+          background-color: #a59d93; } }
+
+.textCenter {
+  text-align: center; }
+
+/*# sourceMappingURL=responsive.css.map */
